@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  ze-demo-proxy:
+#    image: ze-demo-proxy
+    image: haproxy:1.8
+    volumes:
+      - "/mount/general-data/ze-demo-proxy/:/usr/local/etc/haproxy:ro"
+    ports:
+      - "5512:80"
